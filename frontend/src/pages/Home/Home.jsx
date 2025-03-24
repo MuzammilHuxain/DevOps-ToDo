@@ -42,7 +42,7 @@ const Home = () => {
   // get all notes
   const getAllNotes = async () => {
     try {
-      const res = await axios.get("http://13.61.181.76:3000/api/note/all", {
+      const res = await axios.get("http://13.49.80.25:3000/api/note/all", {
         withCredentials: true,
       });
 
@@ -69,7 +69,7 @@ const Home = () => {
 
     try {
       const res = await axios.delete(
-        "http://13.61.181.76:3000/api/note/delete/" + noteId,
+        "http://13.49.80.25:3000/api/note/delete/" + noteId,
         { withCredentials: true }
       );
 
@@ -87,7 +87,7 @@ const Home = () => {
 
   const onSearchNote = async (query) => {
     try {
-      const res = await axios.get("http://13.61.181.76:3000/api/note/search", {
+      const res = await axios.get("http://13.49.80.25:3000/api/note/search", {
         params: { query },
         withCredentials: true,
       });
@@ -115,7 +115,7 @@ const Home = () => {
 
     try {
       const res = await axios.put(
-        "http://13.61.181.76:3000/api/note/update-note-pinned/" + noteId,
+        "http://13.49.80.25:3000/api/note/update-note-pinned/" + noteId,
         { isPinned: !noteData.isPinned },
         { withCredentials: true }
       );

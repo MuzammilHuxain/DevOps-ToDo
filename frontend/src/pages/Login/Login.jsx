@@ -40,7 +40,7 @@ const Login = () => {
       dispatch(signInStart());
 
       const res = await axios.post(
-        "http://13.61.181.76:3000/api/auth/signin",
+        "http://13.49.80.25:3000/api/auth/signin",
         { email, password },
         { withCredentials: true }
       );

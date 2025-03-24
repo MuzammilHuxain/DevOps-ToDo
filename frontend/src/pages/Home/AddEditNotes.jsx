@@ -17,7 +17,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
 
     try {
       const res = await axios.post(
-        "http://13.61.181.76:3000/api/note/edit/" + noteId,
+        "http://13.49.80.25:3000/api/note/edit/" + noteId,
         { title, content, tags },
         { withCredentials: true }
       );
@@ -45,7 +45,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
   const addNewNote = async () => {
     try {
       const res = await axios.post(
-        "http://13.61.181.76:3000/api/note/add",
+        "http://13.49.80.25:3000/api/note/add",
         { title, content, tags },
         { withCredentials: true }
       );
